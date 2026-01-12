@@ -1,0 +1,529 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="4.0" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+    <edmx:Reference Uri="../../catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_COMMON',Version='0001',SAP__Origin='')/$value">
+        <edmx:Include Namespace="com.sap.vocabularies.Common.v1" Alias="Common"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="../../catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_UI',Version='0001',SAP__Origin='')/$value">
+        <edmx:Include Namespace="com.sap.vocabularies.UI.v1" Alias="UI"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="../../catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_COMMUNICATION',Version='0001',SAP__Origin='')/$value">
+        <edmx:Include Namespace="com.sap.vocabularies.Communication.v1" Alias="Communication"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="../../catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_PERSONALDATA',Version='0001',SAP__Origin='')/$value">
+        <edmx:Include Namespace="com.sap.vocabularies.PersonalData.v1" Alias="PersonalData"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="../../catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_VALIDATION',Version='0001',SAP__Origin='')/$value">
+        <edmx:Include Namespace="Org.OData.Validation.V1" Alias="Validation"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="../../catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_ANALYTICS',Version='0001',SAP__Origin='')/$value">
+        <edmx:Include Namespace="com.sap.vocabularies.Analytics.v1" Alias="Analytics"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="../../catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_HTML5',Version='0001',SAP__Origin='')/$value">
+        <edmx:Include Namespace="com.sap.vocabularies.HTML5.v1" Alias="HTML5"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="../../catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_ODM',Version='0001',SAP__Origin='')/$value">
+        <edmx:Include Namespace="com.sap.vocabularies.ODM.v1" Alias="SAP__ODM"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="../../../sap/zsb_mrp_v1/$metadata">
+        <edmx:Include Namespace="ZSB_MRP_V1" Alias="SAP"/>
+    </edmx:Reference>
+    <edmx:DataServices>
+        <Schema Namespace="zsb_mrp_v1_van.v1" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+            <Annotations Target="cds_zsd_mrp_v1.ZCMRP_v1Type">
+                <Annotation Term="UI.Facets">
+                    <Collection>
+                        <Record Type="UI.ReferenceFacet">
+                            <PropertyValue Property="Label" String="MRP Details"/>
+                            <PropertyValue Property="ID" String="idinformation"/>
+                            <PropertyValue Property="Target" AnnotationPath="@UI.Identification"/>
+                        </Record>
+                    </Collection>
+                </Annotation>
+                <Annotation Term="UI.HeaderInfo">
+                    <Record>
+                        <PropertyValue Property="TypeName" String="MRP Details"/>
+                        <PropertyValue Property="TypeNamePlural" String="MRP Details"/>
+                        <PropertyValue Property="Title">
+                            <Record Type="UI.DataField">
+                                <PropertyValue Property="Value" Path="Material"/>
+                            </Record>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="UI.Identification">
+                    <Collection>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Material"/>
+                            <PropertyValue Property="Value" Path="Material"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="MRPArea"/>
+                            <PropertyValue Property="Value" Path="MRPArea"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="MRPPlant"/>
+                            <PropertyValue Property="Value" Path="MRPPlant"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Mrpcontroller"/>
+                            <PropertyValue Property="Value" Path="Mrpcontroller"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Mrpplanningsegment"/>
+                            <PropertyValue Property="Value" Path="Mrpplanningsegment"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Mrpplanningsegmenttype"/>
+                            <PropertyValue Property="Value" Path="Mrpplanningsegmenttype"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Materialshortageprofile"/>
+                            <PropertyValue Property="Value" Path="Materialshortageprofile"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Demandcategorygroup"/>
+                            <PropertyValue Property="Value" Path="Demandcategorygroup"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Demandcategorygroupname"/>
+                            <PropertyValue Property="Value" Path="Demandcategorygroupname"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Receiptcategorygroup"/>
+                            <PropertyValue Property="Value" Path="Receiptcategorygroup"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Receiptcategorygroupname"/>
+                            <PropertyValue Property="Value" Path="Receiptcategorygroupname"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Materialbaseunit"/>
+                            <PropertyValue Property="Value" Path="Materialbaseunit"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Materialbaseunitisocode"/>
+                            <PropertyValue Property="Value" Path="Materialbaseunitisocode"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Materialbaseunitsapcode"/>
+                            <PropertyValue Property="Value" Path="Materialbaseunitsapcode"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Unitofmeasurename"/>
+                            <PropertyValue Property="Value" Path="Unitofmeasurename"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Unitofmeasuretext"/>
+                            <PropertyValue Property="Value" Path="Unitofmeasuretext"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Materialexternalid"/>
+                            <PropertyValue Property="Value" Path="Materialexternalid"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Mrpavailability"/>
+                            <PropertyValue Property="Value" Path="Mrpavailability"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Materialsafetystockqty"/>
+                            <PropertyValue Property="Value" Path="Materialsafetystockqty"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Mrpelementopenquantity"/>
+                            <PropertyValue Property="Value" Path="Mrpelementopenquantity"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Mrpavailablequantity"/>
+                            <PropertyValue Property="Value" Path="Mrpavailablequantity"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Mrpelement"/>
+                            <PropertyValue Property="Value" Path="Mrpelement"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Mrpelementavailyorrqmtdate"/>
+                            <PropertyValue Property="Value" Path="Mrpelementavailyorrqmtdate"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Mrpelementbusinesspartner"/>
+                            <PropertyValue Property="Value" Path="Mrpelementbusinesspartner"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Mrpelementbusinesspartnername"/>
+                            <PropertyValue Property="Value" Path="Mrpelementbusinesspartnername"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Mrpelementbusinesspartnertype"/>
+                            <PropertyValue Property="Value" Path="Mrpelementbusinesspartnertype"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Mrpelementcategory"/>
+                            <PropertyValue Property="Value" Path="Mrpelementcategory"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Mrpelementcategoryshortname"/>
+                            <PropertyValue Property="Value" Path="Mrpelementcategoryshortname"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Mrpelementcategoryname"/>
+                            <PropertyValue Property="Value" Path="Mrpelementcategoryname"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Mrpelementdocumenttype"/>
+                            <PropertyValue Property="Value" Path="Mrpelementdocumenttype"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Mrpelementdocumenttypename"/>
+                            <PropertyValue Property="Value" Path="Mrpelementdocumenttypename"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Mrpelementispartiallydelivered"/>
+                            <PropertyValue Property="Value" Path="Mrpelementispartiallydelivered"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Mrpelementisreleased"/>
+                            <PropertyValue Property="Value" Path="Mrpelementisreleased"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Mrpelementitem"/>
+                            <PropertyValue Property="Value" Path="Mrpelementitem"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Mrpelementquantityisfirm"/>
+                            <PropertyValue Property="Value" Path="Mrpelementquantityisfirm"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Mrpelementscheduleline"/>
+                            <PropertyValue Property="Value" Path="Mrpelementscheduleline"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Productionversion"/>
+                            <PropertyValue Property="Value" Path="Productionversion"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Sourcemrpelement"/>
+                            <PropertyValue Property="Value" Path="Sourcemrpelement"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Sourcemrpelementcategory"/>
+                            <PropertyValue Property="Value" Path="Sourcemrpelementcategory"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Sourcemrpelementitem"/>
+                            <PropertyValue Property="Value" Path="Sourcemrpelementitem"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Sourcemrpelementscheduleline"/>
+                            <PropertyValue Property="Value" Path="Sourcemrpelementscheduleline"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Storagelocation"/>
+                            <PropertyValue Property="Value" Path="Storagelocation"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Timehorizoncode"/>
+                            <PropertyValue Property="Value" Path="Timehorizoncode"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Exceptionmessagenumber"/>
+                            <PropertyValue Property="Value" Path="Exceptionmessagenumber"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Exceptionmessagetext"/>
+                            <PropertyValue Property="Value" Path="Exceptionmessagetext"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Exceptionmessagenumber2"/>
+                            <PropertyValue Property="Value" Path="Exceptionmessagenumber2"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Exceptionmessagetext2"/>
+                            <PropertyValue Property="Value" Path="Exceptionmessagetext2"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Periodtype"/>
+                            <PropertyValue Property="Value" Path="Periodtype"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Periodorsegment"/>
+                            <PropertyValue Property="Value" Path="Periodorsegment"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Numberofworkdaysperperiod"/>
+                            <PropertyValue Property="Value" Path="Numberofworkdaysperperiod"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Numberofaggregateditems"/>
+                            <PropertyValue Property="Value" Path="Numberofaggregateditems"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Mrpelementreschedulingdate"/>
+                            <PropertyValue Property="Value" Path="Mrpelementreschedulingdate"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Plndindeprqmtversion"/>
+                            <PropertyValue Property="Value" Path="Plndindeprqmtversion"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Materialshortageprofilecount"/>
+                            <PropertyValue Property="Value" Path="Materialshortageprofilecount"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Mrpelementbpname1"/>
+                            <PropertyValue Property="Value" Path="Mrpelementbpname1"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Mrpelementbpfullcombinedname"/>
+                            <PropertyValue Property="Value" Path="Mrpelementbpfullcombinedname"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Mrpelementbpshortcombinedname"/>
+                            <PropertyValue Property="Value" Path="Mrpelementbpshortcombinedname"/>
+                        </Record>
+                    </Collection>
+                </Annotation>
+                <Annotation Term="UI.LineItem">
+                    <Collection>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Material"/>
+                            <PropertyValue Property="Value" Path="Material"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="MRPArea"/>
+                            <PropertyValue Property="Value" Path="MRPArea"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="MRPPlant"/>
+                            <PropertyValue Property="Value" Path="MRPPlant"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Mrpplanningsegment"/>
+                            <PropertyValue Property="Value" Path="Mrpplanningsegment"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Mrpplanningsegmenttype"/>
+                            <PropertyValue Property="Value" Path="Mrpplanningsegmenttype"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Materialshortageprofile"/>
+                            <PropertyValue Property="Value" Path="Materialshortageprofile"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Demandcategorygroup"/>
+                            <PropertyValue Property="Value" Path="Demandcategorygroup"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Demandcategorygroupname"/>
+                            <PropertyValue Property="Value" Path="Demandcategorygroupname"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Receiptcategorygroup"/>
+                            <PropertyValue Property="Value" Path="Receiptcategorygroup"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Receiptcategorygroupname"/>
+                            <PropertyValue Property="Value" Path="Receiptcategorygroupname"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Materialbaseunit"/>
+                            <PropertyValue Property="Value" Path="Materialbaseunit"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Materialbaseunitisocode"/>
+                            <PropertyValue Property="Value" Path="Materialbaseunitisocode"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Materialbaseunitsapcode"/>
+                            <PropertyValue Property="Value" Path="Materialbaseunitsapcode"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Unitofmeasurename"/>
+                            <PropertyValue Property="Value" Path="Unitofmeasurename"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Unitofmeasuretext"/>
+                            <PropertyValue Property="Value" Path="Unitofmeasuretext"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Materialexternalid"/>
+                            <PropertyValue Property="Value" Path="Materialexternalid"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Mrpavailability"/>
+                            <PropertyValue Property="Value" Path="Mrpavailability"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Materialsafetystockqty"/>
+                            <PropertyValue Property="Value" Path="Materialsafetystockqty"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Mrpelementopenquantity"/>
+                            <PropertyValue Property="Value" Path="Mrpelementopenquantity"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Mrpavailablequantity"/>
+                            <PropertyValue Property="Value" Path="Mrpavailablequantity"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Mrpelement"/>
+                            <PropertyValue Property="Value" Path="Mrpelement"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Mrpelementavailyorrqmtdate"/>
+                            <PropertyValue Property="Value" Path="Mrpelementavailyorrqmtdate"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Mrpelementbusinesspartner"/>
+                            <PropertyValue Property="Value" Path="Mrpelementbusinesspartner"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Mrpelementbusinesspartnername"/>
+                            <PropertyValue Property="Value" Path="Mrpelementbusinesspartnername"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Mrpelementbusinesspartnertype"/>
+                            <PropertyValue Property="Value" Path="Mrpelementbusinesspartnertype"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Mrpelementcategory"/>
+                            <PropertyValue Property="Value" Path="Mrpelementcategory"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Mrpelementcategoryshortname"/>
+                            <PropertyValue Property="Value" Path="Mrpelementcategoryshortname"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Mrpelementcategoryname"/>
+                            <PropertyValue Property="Value" Path="Mrpelementcategoryname"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Mrpelementdocumenttype"/>
+                            <PropertyValue Property="Value" Path="Mrpelementdocumenttype"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Mrpelementdocumenttypename"/>
+                            <PropertyValue Property="Value" Path="Mrpelementdocumenttypename"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Mrpelementispartiallydelivered"/>
+                            <PropertyValue Property="Value" Path="Mrpelementispartiallydelivered"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Mrpelementisreleased"/>
+                            <PropertyValue Property="Value" Path="Mrpelementisreleased"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Mrpelementitem"/>
+                            <PropertyValue Property="Value" Path="Mrpelementitem"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Mrpelementquantityisfirm"/>
+                            <PropertyValue Property="Value" Path="Mrpelementquantityisfirm"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Mrpelementscheduleline"/>
+                            <PropertyValue Property="Value" Path="Mrpelementscheduleline"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Productionversion"/>
+                            <PropertyValue Property="Value" Path="Productionversion"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Sourcemrpelement"/>
+                            <PropertyValue Property="Value" Path="Sourcemrpelement"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Sourcemrpelementcategory"/>
+                            <PropertyValue Property="Value" Path="Sourcemrpelementcategory"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Sourcemrpelementitem"/>
+                            <PropertyValue Property="Value" Path="Sourcemrpelementitem"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Sourcemrpelementscheduleline"/>
+                            <PropertyValue Property="Value" Path="Sourcemrpelementscheduleline"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="storagelocation"/>
+                            <PropertyValue Property="Value" Path="Storagelocation"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Timehorizoncode"/>
+                            <PropertyValue Property="Value" Path="Timehorizoncode"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Exceptionmessagenumber"/>
+                            <PropertyValue Property="Value" Path="Exceptionmessagenumber"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Exceptionmessagetext"/>
+                            <PropertyValue Property="Value" Path="Exceptionmessagetext"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Exceptionmessagenumber2"/>
+                            <PropertyValue Property="Value" Path="Exceptionmessagenumber2"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Exceptionmessagetext2"/>
+                            <PropertyValue Property="Value" Path="Exceptionmessagetext2"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Periodtype"/>
+                            <PropertyValue Property="Value" Path="Periodtype"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Periodorsegment"/>
+                            <PropertyValue Property="Value" Path="Periodorsegment"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="numberofworkdaysperperiod"/>
+                            <PropertyValue Property="Value" Path="Numberofworkdaysperperiod"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Numberofaggregateditems"/>
+                            <PropertyValue Property="Value" Path="Numberofaggregateditems"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Mrpcontroller"/>
+                            <PropertyValue Property="Value" Path="Mrpcontroller"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Mrpelementreschedulingdate"/>
+                            <PropertyValue Property="Value" Path="Mrpelementreschedulingdate"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="plndindeprqmtversion"/>
+                            <PropertyValue Property="Value" Path="Plndindeprqmtversion"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Materialshortageprofilecount"/>
+                            <PropertyValue Property="Value" Path="Materialshortageprofilecount"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Mrpelementbpname1"/>
+                            <PropertyValue Property="Value" Path="Mrpelementbpname1"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Mrpelementbpfullcombinedname"/>
+                            <PropertyValue Property="Value" Path="Mrpelementbpfullcombinedname"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Mrpelementbpshortcombinedname"/>
+                            <PropertyValue Property="Value" Path="Mrpelementbpshortcombinedname"/>
+                        </Record>
+                    </Collection>
+                </Annotation>
+                <Annotation Term="UI.SelectionFields">
+                    <Collection>
+                        <PropertyPath>Material</PropertyPath>
+                        <PropertyPath>MRPArea</PropertyPath>
+                        <PropertyPath>MRPPlant</PropertyPath>
+                        <PropertyPath>Mrpcontroller</PropertyPath>
+                    </Collection>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="_Entities"/>
+        </Schema>
+    </edmx:DataServices>
+</edmx:Edmx>
